@@ -61,6 +61,7 @@ const burger = document.getElementById("navBurger");
 const navLinks = document.querySelector(".nav-links");
 if (burger) {
   burger.addEventListener("click", () => {
+    burger.blur();
     const isOpen = navLinks.style.display === "flex";
     navLinks.style.display = isOpen ? "none" : "flex";
     navLinks.style.flexDirection = "column";
