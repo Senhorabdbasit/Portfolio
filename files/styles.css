@@ -104,6 +104,11 @@ a:focus-visible, button:focus-visible, .video-card:focus-visible {
   font-weight: 700;
   font-size: 1.2rem;
 }
+.nav-logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
 .nav-logo .dot { color: var(--accent); }
 .nav-links { display: flex; gap: 28px; margin-right: auto; margin-left: 40px; }
 .nav-links a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.2s; }
