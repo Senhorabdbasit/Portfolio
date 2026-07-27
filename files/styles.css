@@ -119,10 +119,9 @@ a:focus-visible, button:focus-visible, .video-card:focus-visible {
 }
 
 @media (max-width: 760px) {
-  .nav-burger { display: none; }
-  .nav .btn-small { display: none; }
-  .nav-links { gap: 16px; }
-  .nav-links a { font-size: 0.85rem; }
+  .nav { justify-content: center; }
+  .nav-links, .nav .btn-small, .nav-burger { display: none; }
+  .nav-logo img { height: 40px; }
 }
 
 /* ==========================================================
