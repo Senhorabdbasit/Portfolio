@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdulbasit — Video Editor</title>
+<meta name="description" content="Video editing that turns views into clients.">
+
+<!-- ================================================================
+     EASY EDIT GUIDE
+     - Text you want to change: just edit it directly below, it's all
+       plain readable HTML.
+     - Links (DM, booking, socials): edit ONCE in script.js under CONFIG
+       — every button using that link updates automatically.
+     - Videos: each video is one <div class="video-card">...</div>
+       block. To add another, copy a whole block (grab from
+       "<!-- VIDEO CARD START -->" to "<!-- VIDEO CARD END -->"),
+       paste it under the others in the same section, then change:
+         1) data-yt="VIDEO_ID"  → the YouTube video ID
+         2) the src="...hqdefault.jpg" VIDEO_ID → same ID
+         3) the title text
+       The YouTube ID is the part after watch?v= in a YouTube URL.
+     - Photos: drop your image files into the /assets folder and
+       update the src="assets/..." paths.
+     ================================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="top">
+  <a href="#top" class="nav-logo">Abdulbasit<span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="#work">My Work</a>
+    <a href="#about">About</a>
+  </nav>
+  <a href="#" class="btn btn-pill btn-small js-dm-link">Book a Call</a>
+  <button class="nav-burger" id="navBurger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <p class="eyebrow mono">● 1 SPOT LEFT THIS MONTH</p>
+  <h1 class="hero-title">
+    Helping Brands &amp; Creators<br>
+    Grow Their Reach
+  </h1>
+  <p class="hero-sub">
+    I help you create better content through story, motion, sound, and design.
+  </p>
+  <a href="#" class="btn btn-pill js-dm-link">Send me a DM</a>
+
+  <!-- Signature element: a video-timeline scrubber, standing in for a hero image -->
+  <div class="scrubber" aria-hidden="true">
+    <div class="scrubber-track">
+      <div class="scrubber-fill"></div>
+      <div class="scrubber-playhead"></div>
+    </div>
+    <div class="scrubber-marks mono">
+      <span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WORK ===================== -->
+<section id="work" class="work">
+
+  <!-- ---- LONG FORM ---- -->
+  <div class="reel-header">
+    <p class="eyebrow mono">REEL — 01</p>
+    <h2>Long Form Content</h2>
+  </div>
+  <div class="video-grid">
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card" data-yt="KkK-Y7GiQ2o">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/KkK-Y7GiQ2o/hqdefault.jpg" alt="Long form video 1" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Long Form Edit 01</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card" data-yt="LhLhKW0IN8U">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/LhLhKW0IN8U/hqdefault.jpg" alt="Long form video 2" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Long Form Edit 02</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card" data-yt="AO2VJ1eHi9c">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/AO2VJ1eHi9c/hqdefault.jpg" alt="Long form video 3" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Long Form Edit 03</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+  </div>
+
+  <!-- ---- PROMOTIONAL ---- -->
+  <div class="reel-header">
+    <p class="eyebrow mono">REEL — 02</p>
+    <h2>Promotional Content</h2>
+  </div>
+  <div class="video-grid">
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card" data-yt="zE_o7a4yMXU">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/zE_o7a4yMXU/hqdefault.jpg" alt="Promo video 1" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Promo Edit 01</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card" data-yt="w67luwKjfZI">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/w67luwKjfZI/hqdefault.jpg" alt="Promo video 2" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Promo Edit 02</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card" data-yt="A0SuMUGNgO8">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/A0SuMUGNgO8/hqdefault.jpg" alt="Promo video 3" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Promo Edit 03</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+  </div>
+
+  <!-- ---- SHORTS ---- -->
+  <div class="reel-header">
+    <p class="eyebrow mono">REEL — 03</p>
+    <h2>Shorts &amp; Talking Heads</h2>
+  </div>
+  <div class="video-grid video-grid--vertical">
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card video-card--vertical" data-yt="bFHODawhg80">
+      <div class="video-thumb video-thumb--vertical">
+        <img src="https://i.ytimg.com/vi/bFHODawhg80/hqdefault.jpg" alt="Short 1" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Short 01</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card video-card--vertical" data-yt="yGkIGTR7Z7A">
+      <div class="video-thumb video-thumb--vertical">
+        <img src="https://i.ytimg.com/vi/yGkIGTR7Z7A/hqdefault.jpg" alt="Short 2" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Short 02</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+    <!-- VIDEO CARD START -->
+    <div class="video-card video-card--vertical" data-yt="DKbYtGzPr2A">
+      <div class="video-thumb video-thumb--vertical">
+        <img src="https://i.ytimg.com/vi/DKbYtGzPr2A/hqdefault.jpg" alt="Short 3" loading="lazy">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title">Short 03</p>
+    </div>
+    <!-- VIDEO CARD END -->
+
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="about">
+  <div class="about-photo">
+    <img src="assets/profile.jpg" alt="Abdulbasit" onerror="this.src='https://placehold.co/560x680/131313/4EA8FF?text=Your+Photo'">
+  </div>
+  <div class="about-copy">
+    <p class="eyebrow mono">TIMECODE — ABOUT</p>
+    <h2>Hi, I'm Abdulbasit</h2>
+    <p class="about-lead">
+      From simple edits to long-form, short-form, reels, and talking-head content —
+      I cut, color, and sound-design videos that keep people watching.
+    </p>
+    <p>
+      I started editing as a hobby and turned it into real, professional work.
+      Always learning, always improving the craft one timeline at a time.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <p class="stat-num">15+</p>
+        <p class="stat-label mono">Videos Worked On</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">2+</p>
+        <p class="stat-label mono">Months of Practice</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">100%</p>
+        <p class="stat-label mono">Deadlines Met</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY WORK WITH ME ===================== -->
+<section class="why">
+  <p class="eyebrow mono center">TIMECODE — WHY ME</p>
+  <h2 class="center">Why Work With Me?</h2>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <p class="why-num mono">01</p>
+      <h3>Better Designs</h3>
+      <p>Most editors focus on effects. I focus on design, layout, and clarity.</p>
+    </div>
+    <div class="why-card">
+      <p class="why-num mono">02</p>
+      <h3>Fast Turnarounds</h3>
+      <p>You won't have to chase updates. I respect deadlines and deliver on time.</p>
+    </div>
+    <div class="why-card">
+      <p class="why-num mono">03</p>
+      <h3>Easy Communication</h3>
+      <p>Clear updates, quick replies, and no confusion about project status.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta">
+  <div class="hero-glow cta-glow" aria-hidden="true"></div>
+  <h2>Ready to make your<br>videos better?</h2>
+  <p>Clean design, clear communication, and reliable delivery.</p>
+  <a href="#" class="btn btn-pill js-dm-link">Send me a DM</a>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <p>© <span id="year"></span> Abdulbasit. All rights reserved.</p>
+  <a href="#" class="js-dm-link">DM on X</a>
+</footer>
+
+<!-- ===================== VIDEO MODAL (for playing clicked videos) ===================== -->
+<div class="modal" id="videoModal">
+  <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+  <div class="modal-frame">
+    <iframe id="modalIframe" width="100%" height="100%"
+      src="" title="Video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
