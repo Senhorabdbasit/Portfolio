@@ -312,6 +312,14 @@ a:focus-visible, button:focus-visible, .video-card:focus-visible {
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   padding: 30px 26px;
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+.why-card:nth-child(2) { animation-delay: 0.5s; }
+.why-card:nth-child(3) { animation-delay: 1s; }
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(78,168,255,0); border-color: var(--border-soft); }
+  50% { box-shadow: 0 0 20px rgba(78,168,255,0.35); border-color: rgba(78,168,255,0.4); }
 }
 .why-num { color: var(--accent); font-size: 0.85rem; margin-bottom: 16px; }
 .why-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
